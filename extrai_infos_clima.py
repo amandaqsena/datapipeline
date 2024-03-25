@@ -19,3 +19,7 @@ key = os.environ['VIRTUAL_CROSSING_KEY']
 
 URL = join('https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/',
             f'{city}/{data_inicio}/{data_fim}?unitGroup=metric&include=days&key={key}&contentType=csv')
+
+dados = pd.read_csv(URL)
+
+print(dados.head())
